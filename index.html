@@ -1,1 +1,103 @@
-Welcome
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>随州美洋洋</title>
+    <link href="https://cdn.bootcss.com/weui/0.4.2/style/weui.min.css" rel="stylesheet">
+    <link href="/static/drop.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="shop1 dropdown">
+            <span class="selLabel">神龙大道旗舰店</span>
+            <input type="hidden" name="cd-dropdown">
+            <ul class="dropdown-list">
+                    <div class="weui_cells weui_cells_access">
+                        {% for myuser in shop1 %}
+                        <a class="weui_cell" href="/person/{{myuser.shop_num}}/{{myuser.staff_code}}">
+                            <div class="weui_cell_hd">
+                                {% if myuser.person_icon %}
+                                <img src="{{myuser.person_icon}}" alt="icon" style="width:20px;margin-right:5px;display:block">
+                                {% else %}
+                                {% load staticfiles %}
+                                <img src="{% static 'myy.jpg' %}" alt="icon" style="width:20px;margin-right:5px;display:block">
+                                {% endif %}
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>{{ myuser.name }}</p>
+                            </div>
+                            <div class="weui_cell_ft">
+                                {{myuser.speciality}}
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="shop2 dropdown">
+            <span class="selLabel">舜井店</span>
+            <input type="hidden" name="cd-dropdown">
+            <ul class="dropdown-list">
+                <li>
+                    <div class="weui_cells weui_cells_access">
+                        {% for myuser in shop2 %}
+                        <a class="weui_cell" href="/person/{{myuser.shop_num}}/{{myuser.staff_code}}">
+                            <div class="weui_cell_hd">
+                                {% if myuser.person_icon %}
+                                <img src="{{myuser.person_icon}}" alt="icon" style="width:20px;margin-right:5px;display:block">
+                                {% else %}
+                                {% load staticfiles %}
+                                <img src="{% static 'myy.jpg' %}" alt="icon" style="width:20px;margin-right:5px;display:block">
+                                {% endif %}
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>{{ myuser.name }}</p>
+                            </div>
+                            <div class="weui_cell_ft">
+                                {{myuser.speciality}}
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="shop3 dropdown">
+            <span class="selLabel">解放路店</span>
+            <input type="hidden" name="cd-dropdown">
+            <ul class="dropdown-list">
+                <li>
+                    <div class="weui_cells weui_cells_access">
+                        {% for myuser in shop2 %}
+                        <a class="weui_cell" href="/person/{{myuser.shop_num}}/{{myuser.staff_code}}">
+                            <div class="weui_cell_hd">
+                                {% if myuser.person_icon %}
+                                <img src="{{myuser.person_icon}}" alt="icon" style="width:20px;margin-right:5px;display:block">
+                                {% else %}
+                                {% load staticfiles %}
+                                <img src="{% static 'myy.jpg' %}" alt="icon" style="width:20px;margin-right:5px;display:block">
+                                {% endif %}
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>{{ myuser.name }}</p>
+                            </div>
+                            <div class="weui_cell_ft">
+                                {{myuser.speciality}}
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/static/drop.js"></script>
+</body>
+
+</html>
