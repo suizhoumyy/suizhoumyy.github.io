@@ -154,3 +154,117 @@ body {
   cursor: pointer;
   letter-spacing: 2px;
 }
+
+/*更改weui样式*/
+.weui_cells {
+  margin-top: 0;
+}
+.weui_cell_hd{
+  width: 50px;
+  height: 50px;
+}
+/*放置两个组件*/
+.two {
+  height: 50px !important;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  left: 80px;
+  right: 20px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  color: #888;
+}
+.weui_cell_primary {
+  color: rgb(51, 51, 51);
+}
+/*链接箭头显示*/
+img {
+  max-width: 100%;
+}
+
+/* 标题栏 */
+.svg-ds {
+  position: relative;
+  z-index: 2;
+  background-color: teal;
+  -webkit-border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="66" viewBox="0,0 64,66"><filter id="dropshadow" height="150%" width="150%"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dx="0" dy="1" result="offsetblur"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter><polygon fill="teal" filter="url(#dropshadow)" points="32,3 2,33 32,63 62,33"/></svg>') 27.27273% 26.5625% repeat;
+       -o-border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="66" viewBox="0,0 64,66"><filter id="dropshadow" height="150%" width="150%"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dx="0" dy="1" result="offsetblur"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter><polygon fill="teal" filter="url(#dropshadow)" points="32,3 2,33 32,63 62,33"/></svg>') 27.27273% 26.5625% repeat;
+          border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="66" viewBox="0,0 64,66"><filter id="dropshadow" height="150%" width="150%"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dx="0" dy="1" result="offsetblur"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter><polygon fill="teal" filter="url(#dropshadow)" points="32,3 2,33 32,63 62,33"/></svg>') 27.27273% 26.5625% repeat;
+  border-width: 0 0 18px;
+  border-style: solid;
+  background-clip: padding-box;
+  margin-bottom: -18px;
+
+  text-align: center;
+  box-sizing: border-box;
+  color: white;
+  font: bold 0.75em/1.3 sans-serif;
+  padding: 1em 2em;
+  -webkit-transform: translatez(0);
+          transform: translatez(0);
+}
+.svg-bi {
+  /*浮动在上方*/
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.container {
+  margin-top: 100px;
+}
+
+/* 相册样式 */
+.photo-gallery {
+  margin: 10px auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.photo-gallery img {
+  margin: 5px auto;
+  width: 100%;
+}
+
+
+/*标题*/
+.page_title {
+  text-align: center;
+  font-size: 34px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 15%;;
+}
+
+.page_desc {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+.inner-box {
+  width: 90%;
+  background: white;
+  margin: 20px auto;
+}
+
+/* 图片查看 */
+#img-view {
+  position: fixed;
+  z-index: 100;
+  display: none;
+  background-color: rgba(0,0,0,0.9);
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: auto;
+}
+
+#img-view > img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+}

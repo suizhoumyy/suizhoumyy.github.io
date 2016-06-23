@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>随州美洋洋</title>
+    <link href="https://cdn.bootcss.com/weui/0.4.2/style/weui.min.css" rel="stylesheet"> {% load staticfiles %}
+    <link href="{% static 'drop.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="svg-bi svg-ds">
+        <h1>美·洋洋 美容美发连锁</h1>
+        <p>职工信息</p>
+    </div>
+    <div class="container">
+        <div class="inner-box">
+            <div class="hd">
+                <h1 class="page_title">{{myuser.name}}</h1>
+                <p class="page_desc">{%if myuser.shop_num == '1'%}神龙大道旗舰店{% elif myuser.shop_num == '2' %}舜井店{%else%}解放路店{%endif%} {% if myuser.profession == '1' %} 发型师 {% elif myuser.profession == '2' %} 烫染师 {% else %} 美容师 {% endif %}</p>
+
+                <center>
+                    {% if myuser.person_icon %}
+                    <img src="/media/avatars/{{myuser.shop_num}}{{myuser.staff_code}}.png" width="50%" alt="icon">
+                    {% else %}
+                    {% load staticfiles %}
+                    <img src="{% static 'myy.jpg' %}" width="50%" alt="icon">
+                    {% endif %}
+                </center>
+
+            </div>
+
+            <div class="weui_media_box weui_media_text">
+                <h4 class="weui_media_title">特长</h4>
+                <p class="weui_media_desc">{{myuser.speciality}}</p>
+            </div>
+
+            <div class="weui_media_box weui_media_text">
+                <h4 class="weui_media_title">个人简介</h4>
+                <p class="weui_media_desc">{{myuser.simple_info}}</p>
+            </div>
+
+            <div class="weui_media_box weui_media_text">
+                <h4 class="weui_media_title">服务理念</h4>
+                <p class="weui_media_desc">{{myuser.service}}</p>
+            </div>
+
+            <div class="weui_media_box weui_media_text">
+                <h4 class="weui_media_title">个人作品</h4>
+            </div>
+            {% if works %}
+            <div class="photo-gallery">
+                {% for work in works %}
+                <img src="{{work.pic.url}}" />
+                {% endfor %}
+            </div>
+            {% else %}
+            <h1><center>暂无个人作品</center></h1> {% endif %}
+        </div>
+        <center>
+            <div class="image-boder">
+                <img src="https://suizhoumyy.github.io/static/qrcode_myy.jpg"/>
+            </div>
+            <div>请关注<span>美·洋洋</span>微信</div>
+        </center>
+    </div>
+    <div class="img-view" id="img-view"><img /></div>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    {% load staticfiles %}
+    <script src="{% static 'photo.js' %}"></script>
+</body>
+
+</html>
